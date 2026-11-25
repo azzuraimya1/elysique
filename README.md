@@ -1,42 +1,65 @@
-# Makeup 101
 
-A free, beginner-friendly web app that helps you start doing your own makeup.
+# ELYSIQUE
 
-- **Beginner guide**: what each product does and what to look for
-- **Skin type quiz**: find out if your skin is dry, oily, combination, normal or sensitive, with tailored tips
-- **Silicone explainer**: silicone-based vs. water-based products, and how to spot silicones on a label
-- **Label scanner**: photo of an ingredient list, read in the browser with OCR, with a plain-English explanation of each ingredient
+**Beauty, decoded.**
 
-Everything runs client-side. No accounts, no server, no API keys, and photos never leave your device.
+ELYSIQUE is a beauty education and technology platform designed to help users understand makeup fundamentals, decode cosmetic ingredients, and make informed beauty decisions.
 
-## Run it locally
+## Features
+
+- **Beginner Makeup Guide:** Learn what different makeup products do and how to use them.
+- **Skin Type Quiz:** Discover your skin type and receive tailored beauty tips.
+- **Silicone Explainer:** Understand silicone-based versus water-based products.
+- **Ingredient Scanner:** Scan cosmetic ingredient labels using browser-based OCR.
+- **Ingredient Analysis:** Break down cosmetic ingredients into easy-to-understand explanations.
+
+## Tech Stack
+
+- React
+- TypeScript
+- JavaScript
+- CSS
+- Vite
+- Tesseract.js (OCR)
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/azzuraimya1/elysique.git
+```
+
+Navigate into the project:
+
+```bash
+cd elysique
+```
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-## Deploy free on GitHub Pages
+## Future Improvements
 
-1. Push this repo to GitHub (default branch `main`).
-2. In the repo, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
-3. Push to `main`. The workflow in `.github/workflows/deploy.yml` builds and publishes the site.
+- Expand the cosmetic ingredient database.
+- Add barcode scanning with Open Beauty Facts.
+- Introduce product comparison.
+- Allow users to save products and notes.
+- Add offline support through a Progressive Web App.
 
-## How the scanner works
+## Our Mission
 
-1. [Tesseract.js](https://github.com/naptha/tesseract.js) extracts text from the photo in the browser.
-2. `src/lib/analyze.ts` splits the text into ingredients and matches each against `src/data/ingredients.ts`.
-3. Anything ending in `-cone`, `-siloxane`, `-silanol` or `-conol` is flagged as a silicone, even if it isn't in the database.
-
-## Ideas for next steps
-
-- Grow the ingredient database (it is the heart of the app)
-- Barcode lookup with the free [Open Beauty Facts](https://world.openbeautyfacts.org/) API
-- Make it an installable PWA with offline support
-- "Compare two products" view
-- Save products and notes in `localStorage`
-- Tests for `analyze.ts`
+Making beauty easier to understand through education, technology, and informed product choices.
 
 ## Disclaimer
 
-Educational only, not medical advice.
+ELYSIQUE provides educational information and is not a substitute for professional medical advice.
